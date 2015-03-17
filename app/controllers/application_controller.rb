@@ -9,12 +9,12 @@ class ApplicationController < ActionController::Base
     redirect_to(:root)
   end
 
-  rescue_from OAuth2::Error do |exception|
-    if exception.response.status == 401
-      session[:token] = nil
-      redirect_to('/auth/heap')
-    end
-  end
+  # rescue_from OAuth2::Error do |exception|
+  #   if exception.response.status == 401
+  #     session[:token] = nil
+  #     redirect_to('/auth/heap')
+  #   end
+  # end
 
   private
 

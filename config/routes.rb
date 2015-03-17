@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   root 'home#index'
+
   get 'auth/:provider/callback', to: 'application#auth_callback'
+  get 'auth/failure', to: redirect('/')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
