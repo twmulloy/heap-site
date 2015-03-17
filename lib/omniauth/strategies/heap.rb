@@ -7,7 +7,7 @@ module OmniAuth
       option :name, :heap
 
       option :client_options, {
-        site: 'http://localhost:3000',
+        site: ENV['HEAP_SITE_URI'],
         authorize_url: '/oauth/authorize'
       }
 
