@@ -7,7 +7,7 @@ module OmniAuth
       option :name, :heap
 
       option :client_options, {
-        site: ENV['HEAP_SITE_URI'],
+        site: ENV['HEAP_SITE_URI'] || 'https://hheap.com',
         authorize_url: '/oauth/authorize'
       }
 
